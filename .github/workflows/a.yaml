@@ -15,6 +15,7 @@ jobs:
         id: plan
         run: |
           echo "$MY_CFG_PLAN"
+          echo "CFG2FILE=${MY_CFG_PLAN}" >> GITHUB_OUTPUT
           if test -f "$MY_CFG_PLAN" 
             then
               echo "CFGFILE=" 
@@ -29,8 +30,11 @@ jobs:
       - name: Get Information to trigger SIT deployment
         run: |
           echo $MY_CFGPLAN
+          echo $MY_CFGPLAN2
+          
         env:
           #MY_CFGPLAN: "/${{ steps.composite.outputs.COMPOSITE_PATH }}/SIT_${{ steps.composite.outputs.COMPOSITE_NAME }}_cfgplan.xml" 
           MY_CFGPLAN: "/${{ steps.plan.outputs.CFGFILE }}"  
+          MY_CFGPLAN2: "/${{ steps.plan.outputs.CFG2FILE }}"  
      
      
