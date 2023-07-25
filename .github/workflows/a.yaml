@@ -27,6 +27,6 @@ jobs:
           
       - name: Get Information to trigger SIT deployment
         run: |
-          echo {{ steps.plan.outputs.CFGFILE }}
+          echo ${{ steps.plan.outputs.CFGFILE }}
           
      
