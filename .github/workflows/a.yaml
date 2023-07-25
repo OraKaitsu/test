@@ -20,7 +20,7 @@ jobs:
               echo "CFGFILE=" 
               echo "CFGFILE=" >> GITHUB_OUTPUT
             else
-              echo "CFGFILE=$MY_CFG_PLAN 
+              echo "CFGFILE=$MY_CFG_PLAN"
               echo "CFGFILE=$MY_CFG_PLAN" >> GITHUB_OUTPUT
           fi          
         env:
