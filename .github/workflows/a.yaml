@@ -35,7 +35,9 @@ jobs:
         run: |
           if test -z "$TEMPDIR" 
             then
-              echo "ssj here"
+              echo "No cleanup necessary"
+            else
+              echo "ssh here"
           fi   
         env:
           TEMPDIR: ${{ steps.plan.outputs.CFGFILE }}
