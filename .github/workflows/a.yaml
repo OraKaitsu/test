@@ -19,6 +19,7 @@ jobs:
               echo "CFGFILE=" 
               echo "CFGFILE=" >> $GITHUB_OUTPUT
             else
+              exit 1
               echo "CFGFILE=$MY_CFG_PLAN"
               echo "CFGFILE=$MY_CFG_PLAN" >> $GITHUB_OUTPUT
           fi    
