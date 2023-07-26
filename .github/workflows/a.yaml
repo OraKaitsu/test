@@ -29,8 +29,13 @@ jobs:
         run: |
           echo ${{ steps.plan.outputs.CFGFILE }}
       - name: Always
-        if: always()
+        if: always() 
         run: |
-          echo ${{ steps.plan.outputs.CFGFILE }}
+          if test -z "$TEMPDIR" 
+            then
+              echo "ssj here"
+          fi   
+        env:
+          TEMPDIR: ${{ steps.plan.outputs.CFGFILE }}
           
      
