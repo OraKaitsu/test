@@ -21,7 +21,8 @@ jobs:
             else
               echo "CFGFILE=$MY_CFG_PLAN"
               echo "CFGFILE=$MY_CFG_PLAN" >> $GITHUB_OUTPUT
-          fi          
+          fi    
+          exit 1
         env:
           MY_CFG_PLAN: "A/B/C/D.xml"  
           
